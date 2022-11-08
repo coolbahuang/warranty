@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/* CSS Document */
+body{ background: #F6F6F6; padding-top: 59px;}
+a{ text-decoration: none;}
+a:hover{ color: #7A7A7A;}
+P{ color: #7A7A7A; font-size: 18px; margin-bottom: 5px;}
+header{
+	background: url("../images/warranty-title-bg.jpg") no-repeat center;
+	background-size: cover;
+	color: #fff;
+	padding: 80px 30px 160px;
+	}
+header h1, header h2{ letter-spacing: 1px;}
+header h2.display-6{ font-size: 20px;}
+@media (max-width: 768px){
+	header{
+		background: url("../images/warranty-title-bg-mb.jpg") no-repeat right;
+		background-size: cover;
+		}
+	}
+
+footer{ 
+	padding: 100px 0 40px;
+	color: #7A7A7A; 
+	font-size: 14px;
+	}
+footer a{
+	color: #B0B0B0; 
+	padding-left: 14px;
+	}
+@media (max-width: 768px){
+	footer{ font-size: 12px;}
+	footer .col-md-6{ text-align: center !important;}
+	}
+
+/**NAV**/
+nav.bg-dark{ background: #000 !important;}
+.navbar-collapse{ justify-content: flex-end;}
+nav .nav-link{ 
+	font-size: 14px; 
+	margin-left: 20px; 
+	letter-spacing: 1px;
+	}
+nav .navbar-toggler{ 
+	border: none !important; 
+	outline: none !important; 
+	box-shadow: none !important;
+	}
+
+@media (max-width: 991px){
+	nav .navbar-nav{ padding: 2rem 0px;}
+	nav .nav-link{ 
+		padding: 30px;
+    	margin: 10px 30px;
+    	border: 1px solid rgba(255,255,255,.55);
+    	border-radius: 6px;
+    	text-align: center;
+		}
+	nav .nav-link.active{ 
+		border: 1px solid rgba(255,255,255,1);
+		background: rgba(255,255,255,0.15);
+		}
+	}
+
+.container{ max-width: 1000px; margin: 0 auto;}
+.section-up{
+	padding-top: 50px;
+	margin-top: -130px;
+	}
+.section-card{
+	padding: 4rem;
+	background: #fff;
+	border-radius: 30px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.02);
+	}
+@media (max-width: 991px){
+	.section-card{ padding: 50px 1.2rem; border-radius: 15px;}
+	}
+
+/**FORM**/
+.form-floating>label{ color: #333;}
+.form-control, .form-select{ 
+	color: #333;
+	border: 1px solid #EAEAEA;
+	}
+.form-floating>.form-control:focus~label, 
+.form-floating>.form-control:not(:placeholder-shown)~label, 
+.form-floating>.form-select~label{
+	opacity: .5;
+    transform: scale(.75) translateY(-0.5rem) translateX(0.15rem);
+	}
+.form-check{
+	font-size: 14px;
+	color: #7a7a7a;
+	}
+
+/**BTN**/
+.btn-blue{ 
+	color: #fff;
+	background: #29ABE2;
+	border-color: #29ABE2;
+	}
+.input-group button{ max-height: 58px;}
+
+@media (max-width: 340px){
+	#button-ProductCode{
+		width: 100%;
+    	border-radius: 3px;
+    	margin-top: 5px;
+		}
+	}
+
+
+/**TABS**/
+.nav-pills li{ width: 50%;}
+.nav-pills .nav-link{ 
+	width: 100%;
+	color: #DADADA;
+	border-bottom: 3px solid #DADADA;
+	border-radius: 0;
+	}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+	color: #29ABE2;
+	border-bottom: 3px solid #29ABE2;
+	background: none;
+	}
+
+/**Notice**/
+.notice{
+	color: #B0B0B0;
+	font-size: 14px;
+	}
+.notice-info p{ 
+	margin-bottom: 10px;
+	font-size: 14px;
+	}
+.notice-info span{ 
+	font-size: 12px;
+    color: #fff;
+    background: #29ABE2;
+    padding: 4px 14px;
+    letter-spacing: 2px;
+    margin-right: 6px;
+    border-radius: 20px;
+	}
+.notice-info p:first-child{
+	color: #333;
+	font-size: 16px;
+	margin-bottom: 20px;
+	}
+.notice-info img{
+	margin-top: 20px;
+	}
+@media (max-width: 768px){
+	.notice-info p{ margin-bottom: 20px;}
+	.notice-info span{ 
+		display: block;
+    	border-radius: 0px;
+    	color: #29ABE2;
+    	background: none;
+    	border-bottom: 1px solid #29ABE2;
+    	width: fit-content;
+    	padding: 0;
+    	margin-bottom: 10px;
+    	font-weight: 500;
+		}
+	}
+
+/**已登錄保固**/
+#register{
+	padding-top: 120px;
+	}
+.register-pd{
+	padding: 20px 0;
+	border-bottom: 1px solid #dadada;
+	color: #7A7A7A;
+	}
+.register-pd:first-child{ padding-top: 0 !important;}
+.register-pd:last-child{ border-bottom: none;}
+.register-pd h5{
+	font-size: 20px;
+	margin-bottom: 10px;
+	}
+.register-pd h6{
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 15px;
+	background: #29ABE2;
+	color: #fff;
+	width: fit-content;
+	padding: 4px 14px;
+	border-radius: 20px;
+	}
+.register-pd p{
+	font-size: 14px;
+	margin-bottom: 4px;
+	}
+.register-pd img{ 
+	max-width: 300px; 
+	margin: 0 auto;
+	display: block;
+	}
+#register-expired .register-pd, #register-expired .register-pd p{ color: #B0B0B0;}
+#register-expired .register-pd h6{ background: #B0B0B0;}
+#register-expired .register-pd img{ opacity: .5;}
+
+@media (max-width: 768px){
+	.register-pd{ text-align: center;}
+	.register-pd h6{ margin: 0 auto 15px;}
+	.register-pd h5{ font-size: 16px;}
+	.register-pd img{ 
+		width: 80%;
+		max-width: 250px; 
+		margin: 0 auto;
+		display: block;
+		}
+	}
+
+/**Pagination**/
+.pagination{ margin-bottom: 0;}
+.page-link, .page-link:focus, .page-link:hover{ color: #B0B0B0;}
+.page-item.active .page-link{ background: #7A7A7A; border-color: #7A7A7A;}
+
+/**Modal**/
+.modal-body p{ font-size: 16px;}

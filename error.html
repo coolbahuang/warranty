@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<title>保固登錄 登錄已過保產品</title>
+  </head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="10" class="scrollspy" tabindex="0">
+	
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand"><img src="images/witspaer-logo.svg"></a>
+			<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+					aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link" href="#warranty">
+						<i class="bi bi-upc-scan"></i> 登錄保固
+					</a>
+					<a class="nav-link" href="#register">
+						<i class="bi bi-search"></i> 查詢保固
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<header>
+		<div class="text-center container">
+			<h1 class="mb-3">WitsCare 服務中心</h1>
+			<h2 class="display-6 mb-5">WitsPer智選家 保固登錄</h2>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-2 mb-3">
+				<a class="btn btn-blue mx-auto d-block" href="#warranty">登錄保固</a>
+			</div>
+			<div class="col-md-2 mb-3">
+				<a class="btn btn-blue mx-auto d-block" href="#register">查詢保固</a>
+			</div>
+		</div>
+	</header>
+	
+	<section id="warranty" class="container section-up">
+		<div class="section-card">
+			<h3 class="mb-5 text-center">登錄保固</h3>
+			<ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="tabs-pd-tab" data-bs-toggle="pill" data-bs-target="#tabs-pd" type="button" role="tab" aria-controls="tabs-pd" aria-selected="true">產品資訊</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="tabs-user-tab" data-bs-toggle="pill" data-bs-target="#tabs-user" type="button" role="tab" aria-controls="tabs-user" aria-selected="false">基本資料</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="pills-tabContent">
+				<!--產品資訊-->
+				<div class="tab-pane fade show active" id="tabs-pd" role="tabpanel" aria-labelledby="tabs-pd-tab">
+					<div class="mb-5">
+						<p class="text-center">請確認以下的欄位均自動帶入資訊</p>
+						<p class="text-center">
+							<a class="notice" data-bs-toggle="collapse" href="#collapseExample" role="button" 
+							   aria-expanded="false" aria-controls="collapseExample">
+								<i class="bi bi-info-circle"></i> 沒有自動帶入資訊怎麼辦
+							</a>
+						</p>
+						<div class="collapse notice-info" id="collapseExample" style="background: #F2F2F2; border-radius: 5px; padding: 2% 5%;">
+							<div class="card-body text-left">
+								<p>欄位未自動帶入資訊時，您可以嘗試以下步驟：</p>
+								<p><span>方法一</span>重新掃描產品QR Code，進入此保固登錄頁面</p>
+								<p><span>方法二</span>手動填寫產品條碼（圖片紅框處），輸入後點擊「查詢」，將會自動帶入其他資訊</p>
+								<img class="d-none d-sm-block" src="images/warranty-code.png" width="100%">
+								<img class="d-block d-sm-none" src="images/warranty-code-mb.png" width="100%">
+							</div>
+						</div>
+					</div>
+					<form class="row g-3 needs-validation justify-content-center" novalidate>
+						<div class="col-md-12">
+							<div class="input-group mb-1">
+								<div class="form-floating flex-grow-1">
+									<input type="text" class="form-control" name="ProductCode" placeholder="產品條碼" required>
+									<label for="ProductCode">產品條碼</label>
+									<div class="invalid-feedback">必填</div>
+								</div>
+								<button class="btn btn-secondary" type="button" id="button-ProductCode">查詢</button>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="form-control" id="ProductBrand" placeholder="產品品牌" required disabled readonly>
+								<label for="ProductBrand">產品品牌</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="form-control" id="ProductModel" placeholder="產品型號" required disabled readonly>
+								<label for="ProductModel">產品型號</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-floating">
+								<input type="text" class="form-control" id="ProductChannel" placeholder="購買通路" required disabled readonly>
+								<label for="ProductChannel">購買通路</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="form-control" id="ProductBuyDate" placeholder="購買通路" required disabled readonly>
+								<label for="ProductBuyDate">購買日期</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="form-control" id="ProductShippingDate" placeholder="購買通路" required disabled readonly>
+								<label for="ProductShippingDate">出貨日期</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						
+						<div class="col-md-3 mx-auto d-grid mt-5">
+    						<button class="btn btn-blue form-next" type="submit">下一步</button>
+  						</div>
+					</form>
+				</div>
+				<!--基本資料-->
+				<div class="tab-pane fade" id="tabs-user" role="tabpanel" aria-labelledby="tabs-user-tab">
+					<div class="mb-5">
+						<p class="text-center">溫馨提醒</p>
+						<p class="text-center">
+							<a class="notice"><i class="bi bi-info-circle"></i> 資訊務必檢查填寫正確，以享有保固服務</a>
+						</p>
+					</div>
+					<form class="row g-3 needs-validation" novalidate>
+						<div class="col-md-6">
+							<div class="form-floating mb-1">
+								<input type="text" class="form-control" id="CustomName" 
+									   placeholder="請輸入姓名" required>
+								<label for="CustomName">姓名</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating mb-1">
+								<input type="text" class="form-control" id="CustomLine" 
+									   placeholder="請輸入LINE ID"  required>
+								<label for="CustomLine">LINE ID</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<select class="form-select" id="CustomGender" aria-label="請選擇性別" required>
+									<option selected disabled value="">請選擇性別...</option>
+									<option value="1">男性</option>
+									<option value="2">女性</option>
+									<option value="3">不透露</option>
+								</select>
+								<label for="CustomGender">性別</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="datepicker_input form-control" id="CustomBirthday" 
+									   placeholder="YYYY/MM/DD" required>
+								<label for="CustomBirthday">生日</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating mb-1">
+								<input type="tel" class="form-control" id="CustomPhone" placeholder="請輸入手機號碼" 
+									   pattern="[0-9]{10}" required>
+								<label for="CustomPhone">手機號碼</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating mb-1">
+								<input type="email" class="form-control" id="CustomEmail" 
+									   placeholder="name@example.com" required>
+								<label for="CustomEmail">電子信箱</label>
+								<div class="invalid-feedback">必填</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="CustomAgree" checked required>
+								<label class="form-check-label" for="CustomAgree">同意將上述個人資料提供予智選家，作為保固登記用途資訊將會嚴格把關，絕不外流作為其他用途</label>
+							</div>
+						</div>
+						<div class="col-md-3 mx-auto d-grid mt-5">
+    						<button class="btn btn-blue form-next" type="submit"
+									data-bs-toggle="modal" data-bs-target="#NoticeModal">送出</button>
+  						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--登錄保固-END-->
+	
+	<!-- 系統通知 -->
+	<div class="modal fade" id="NoticeModal" tabindex="-1" aria-labelledby="NoticeModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title" id="NoticeModalLabel">保固資料成功送出！</h5>
+      			</div>
+      			<div class="modal-body">
+					<p>系統將自動跳轉，跳轉後點擊「查詢保固」即可查看登錄產品。</p>
+				</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<!-- 系統通知 錯誤 -->
+	<div class="modal fade" id="NoticeModal2" tabindex="-1" aria-labelledby="NoticeModal2Label" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title" id="NoticeModal2Label">產品已過登錄期限！</h5>
+      			</div>
+      			<div class="modal-body">
+					<p>抱歉，您的保固已超過登錄期限<br>無法進行登錄。</p>
+				</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">了解</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	
+	<section id="register" class="container">
+		<h3 class="mb-5 text-center">已登錄的保固</h3>
+		<div class="section-card">
+			<div class="text-center">
+				<p>目前尚無保固紀錄</p>
+			</div>
+		</div>
+	</section>
+	
+	<section id="register-expired" class="container mt-5">
+		<h3 class="mb-5 text-center">保固已到期</h3>
+		<div class="section-card">
+			<div class="text-center">
+				<p>目前無保固到期產品</p>
+			</div>
+		</div>
+	</section>
+	<!--已登錄的產品保固-END-->
+	
+	<footer class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6 text-start mb-3">Copyright © WitsPer 智選家 All Rights Reserved</div>
+			<div class="col-md-6 text-end mb-3">
+				<a href="https://www.witsper.com/about/terms" target="_blank">條款與細則</a>
+				<a href="https://www.witsper.com/pages/witscare" target="_blank">更多售後服務</a>
+				<a href="https://www.witsper.com/" target="_blank">線上購物</a>
+			</div>
+		</div>
+	</footer>
+	
+	
+	
+	
+<!-- 頁面載入Modal -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>
+	$(window).ready(() => {
+		$('#NoticeModal2').modal('show');
+	})
+</script>
+	
+<!-- 表單日期選擇 -->
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+<script>
+const getDatePickerTitle = elem => {
+  // From the label or the aria-label
+  const label = elem.nextElementSibling;
+  let titleText = '';
+  if (label && label.tagName === 'LABEL') {
+    titleText = label.textContent;
+  } else {
+    titleText = elem.getAttribute('aria-label') || '';
+  }
+  return titleText;
+}
+
+const elems = document.querySelectorAll('.datepicker_input');
+for (const elem of elems) {
+  const datepicker = new Datepicker(elem, {
+    'format': 'yyyy - mm - dd', 
+    title: getDatePickerTitle(elem)
+  });
+}
+</script>
+
+<!-- 表單驗證 -->
+<script>
+(function () {
+  'use strict'
+
+  var forms = document.querySelectorAll('.needs-validation')
+
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+	
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	
+</body>
+</html>
