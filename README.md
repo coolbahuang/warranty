@@ -15,3 +15,7 @@
 * 關閉錯誤視窗回到主畫面，欄位資料為空
 
 
+[送出錯誤條碼資料 Demo](https://coolbahuang.github.io/warranty/error2.html)
+
+* 條碼資訊有誤，點擊表單送出
+* 跳出錯誤提示，要求返回上一步驟
