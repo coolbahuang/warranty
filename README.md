@@ -5,7 +5,6 @@
 * 有保固紀錄
 * 資料順利帶入
 * 表單按送出後跳出成功送出提示
-![順利登錄](https://cdn.shopify.com/s/files/1/0404/1834/5117/files/warranty-screen-01.png?v=1667965048)
 
  
 [登錄已過保產品 Demo](https://coolbahuang.github.io/warranty/error.html)
