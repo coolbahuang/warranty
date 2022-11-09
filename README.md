@@ -5,7 +5,7 @@
 * 有保固紀錄
 * 資料順利帶入
 * 表單按送出後跳出成功送出提示
-
+![This is a alt text.](/image/sample.png "This is a sample image.")
 
  
 [登錄已過保產品 Demo](https://coolbahuang.github.io/warranty/error.html)
