@@ -1,6 +1,6 @@
 # 智選家 保固登錄頁面
 
-[順利登錄 Demo](https://coolbahuang.github.io/warranty/)
+[順利登錄 Demo](https://coolbahuang.github.io/warranty/){:target="_blank"}
 
 * 有保固紀錄
 * 資料順利帶入
@@ -8,7 +8,7 @@
 
 
  
-[登錄已過保產品 Demo](https://coolbahuang.github.io/warranty/error.html)
+[登錄已過保產品 Demo](https://coolbahuang.github.io/warranty/error.html){:target="_blank"}
 
 * 無保固紀錄
 * 掃描過保條碼，頁面載入時立即跳出錯誤提示
