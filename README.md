@@ -13,3 +13,8 @@
 * 無保固紀錄
 * 掃描過保條碼，頁面載入時立即跳出錯誤提示
 * 關閉錯誤視窗回到主畫面，欄位資料為空
+
+
+[link](http://example.com){:hreflang="de"}
+
+[Hello, world!](http://example.com/){target="_blank"}
