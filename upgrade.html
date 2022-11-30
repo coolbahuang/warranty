@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	<style>
+		html, body {
+    		height: 100%;
+    		padding: 0;
+    		margin: 0;
+			}
+		section.upgrade{ 
+			background: #29ABE2;
+			width: 100%;
+			height: 100vh;
+			position: relative;
+			}
+		section.upgrade a{ 
+			color: #fff;
+			font-weight: bold;
+			text-decoration: none;
+			padding-bottom: 1px;
+			border-bottom: 1px solid #fff;
+			cursor: pointer;
+			}
+		section.upgrade h2, section.upgrade h4{ color: #333;}
+		section.upgrade .text_wrapper p{
+			color: #7A7A7A;
+			font-size: 18px;
+			line-height: 30px;
+			}
+		.center{
+			position: absolute;
+			top:50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+			width: 90%;
+			max-width: 700px;
+			text-align: center;
+			}
+		.text_wrapper{
+			background: #fff;
+			border-radius: 30px;
+			padding: 5% 20%;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.02);
+			position: relative;
+			}
+		.bt_upgrade{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 40%;
+			}
+		.zizi{ 
+			position: absolute;
+			right: -11%;
+			width: 26%;
+			top: 20%;
+			z-index: 2;
+			}
+		.zizi_mb{ display: none;}
+
+		@media (max-width: 768px){
+			.zizi{ display: none;}
+			.bt_upgrade{ width: 80%;}
+			.text_wrapper{ padding: 5% 10%;}
+			.zizi_mb{ 
+				display: block;
+    			position: absolute;
+    			bottom: -4%;
+    			z-index: 2;
+    			right: 2%;
+    			width: 43%;
+				}
+			.text_wrapper{ padding: 10% 20px; border-radius: 20px;}
+			.center{ top: 35%;}
+			}
+	</style>
+	
+	<section class="upgrade">
+		<div class="center">
+			<div class="text_wrapper">
+				<img class="zizi" src="https://cdn.shopify.com/s/files/1/0404/1834/5117/files/upgrade-zizi.png?v=1669784529">
+				<h2>保固登錄功能維護中</h2>
+				<p>為了提升服務體驗，保固登錄功能目前升級中<br>造成不便·敬請見諒</p>
+				<h4>將於 2022年12月15日 00:00 啟用</h4>
+			</div>
+			<p style="color: #fff;">如有任何問題 歡迎加入 <a href="https://maac.io/1VMEV" target="_blank">官方LINE@</a> 詢問</p>
+		</div>
+		<img class="zizi_mb" src="https://cdn.shopify.com/s/files/1/0404/1834/5117/files/upgrade-zizi.png?v=1669784529">
+		<img class="bt_upgrade" src="https://cdn.shopify.com/s/files/1/0404/1834/5117/files/upgrade.png?v=1669784529">
+	</section>
+	
+	
+</body>
+</html>
