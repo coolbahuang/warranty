@@ -217,3 +217,32 @@ nav .navbar-toggler{
 
 /**Modal**/
 .modal-body p{ font-size: 16px;}
+
+/**line**/
+.line_float_btn {
+    background: #4CC764;
+    position: fixed;
+    bottom: 50px;
+	right: 2%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    z-index: 96;
+	}
+.line_float_btn:before {
+    content: '';
+    background: url(https://cdn.shopify.com/s/files/1/0404/1834/5117/files/line-icon.svg) no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+	}
+.line-bn{
+	width: 100%;
+	max-width: 1000px;
+	display: block;
+	padding: 30px 10px 0;
+	margin: 0 auto;
+	}
