@@ -18,3 +18,8 @@
 
 * 條碼資訊有誤，點擊表單送出
 * 跳出錯誤提示，要求返回上一步驟
+
+
+[8/22新增 寄倉商品登錄保固 Demo](https://coolbahuang.github.io/warranty/channel.html)
+
+* 需上傳發票、購買證明
