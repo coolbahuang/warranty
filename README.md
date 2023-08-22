@@ -1,5 +1,11 @@
 # 智選家 保固登錄頁面
 
+[寄倉商品登錄保固 Demo](https://coolbahuang.github.io/warranty/channel.html)
+
+* 2023/8/22新增此頁面
+* 需上傳發票、購買證明
+
+
 [順利登錄 Demo](https://coolbahuang.github.io/warranty/)
 
 * 有保固紀錄
@@ -20,6 +26,3 @@
 * 跳出錯誤提示，要求返回上一步驟
 
 
-[8/22新增 寄倉商品登錄保固 Demo](https://coolbahuang.github.io/warranty/channel.html)
-
-* 需上傳發票、購買證明
